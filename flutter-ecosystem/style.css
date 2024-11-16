@@ -1,0 +1,589 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html {
+  font-size: clamp(10px, 1vw, 20px);
+}
+
+header .event-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1vw 0;
+  text-decoration: none;
+  color: white;
+  font-size: 0.9em;
+  font-weight: 700;
+  background: linear-gradient(45deg, #057BFC, #7F40F2);
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1vw 3.1rem;
+  align-items: center;
+}
+header nav i {
+  display: none;
+}
+header nav ul {
+  display: flex;
+  gap: 2em;
+}
+header nav ul li {
+  list-style: none;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #4a4a4a;
+  font-size: 14px;
+  font-family: "Google Sans", sans-serif;
+  font-weight: 700;
+}
+header nav ul li a:hover {
+  color: #057BFC;
+}
+header nav ul li:nth-last-child(1) a {
+  color: white;
+  padding: 10px 20px;
+  background-color: #0468d7;
+  border-radius: 50px;
+}
+header nav ul li:nth-last-child(1) a:hover {
+  background-color: #057BFC;
+}
+
+main {
+  width: 100%;
+}
+main .view1 {
+  background: linear-gradient(45deg, #fcdde8, #f3fcff);
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 10vh 5vw;
+}
+main .view1 .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .view1 .top > * {
+  flex-basis: 50%;
+}
+main .view1 .top .text {
+  padding-left: 12vw;
+  font-size: 3em;
+  line-height: 1.6em;
+  font-weight: bold;
+  width: contain;
+}
+main .view1 .top img {
+  width: 27em;
+  -o-object-fit: contain;
+     object-fit: contain;
+  aspect-ratio: 3/2;
+}
+main .view1 .bottom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .view1 .bottom p {
+  width: 70%;
+  font-size: 2em;
+  text-align: center;
+}
+main .view2 {
+  padding: 5vw 10vw;
+}
+main .view2 .container {
+  display: flex;
+  gap: 2.5em;
+}
+main .view2 .container .card {
+  border-top: 4px solid #cfd1d4;
+  display: flex;
+  flex-direction: column;
+  padding-right: 5vw;
+  padding-top: 2.2vw;
+  gap: 1.5vw;
+}
+main .view2 .container .card h2 {
+  font-size: 2em;
+}
+main .view2 .container .card p {
+  font-size: 1.2em;
+  opacity: 0.7;
+}
+main .view2 .container .card img {
+  margin-top: 5vh;
+  max-width: 20em;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .view3 {
+  padding: 5vw 5vw 5vw 15vw;
+}
+main .view3 .container-view3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+main .view3 .container-view3 > * {
+  flex-basis: 50%;
+}
+main .view3 .container-view3 .container-view3-left {
+  padding: 5vw 5vw 10vh 0;
+  display: flex;
+  flex-direction: column;
+}
+main .view3 .container-view3 .container-view3-left h3 {
+  font-size: 1.4em;
+  color: #777879;
+  margin-bottom: 1.2vw;
+}
+main .view3 .container-view3 .container-view3-left h1 {
+  font-size: 4em;
+}
+main .view3 .container-view3 .container-view3-left p {
+  margin: 2vw 0;
+  color: #777879;
+  line-height: 1.3;
+  font-size: 1.3em;
+}
+main .view3 .container-view3 .container-view3-left .btn-links {
+  margin-top: 1vw;
+  display: flex;
+  align-items: center;
+  gap: 5vw;
+}
+main .view3 .container-view3 .container-view3-left .btn-links > * {
+  text-decoration: none;
+}
+main .view3 .container-view3 .container-view3-left .btn-links > :nth-child(1) {
+  padding: 8px 20px;
+  border: 1px solid #0468d7;
+  color: #0468d7;
+  border-radius: 50px;
+  font-weight: 500;
+}
+main .view3 .container-view3 .container-view3-left .btn-links > :nth-child(1):hover {
+  background-color: #0468d7;
+  color: white;
+}
+main .view3 .container-view3 .container-view3-left .btn-links :nth-child(2) {
+  display: flex;
+  align-items: center;
+  color: #777879;
+}
+main .view3 .container-view3 .container-view3-left .btn-links :nth-child(2) span {
+  border: none !important;
+  color: #777879;
+  padding: 0;
+  transition: all 0.3s linear;
+}
+main .view3 .container-view3 .container-view3-left .btn-links :nth-child(2):hover span {
+  transition: all 0.3s linear;
+  padding-left: 2px;
+}
+main .view3 .container-view3 .container-view3-right img {
+  width: 30em;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .view4 {
+  background: linear-gradient(45deg, #fcfce2, #f5fbfe);
+  padding: 2vw 5vw 2vw 15vw;
+}
+main .view4 .container-view4 {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+main .view4 .container-view4 > * {
+  flex-basis: 50%;
+}
+main .view4 .container-view4 .container-view4-right {
+  padding: 5vw 5vw 10vh 0;
+  display: flex;
+  flex-direction: column;
+}
+main .view4 .container-view4 .container-view4-right h3 {
+  font-size: 1.4em;
+  color: #777879;
+  margin-bottom: 1.2vw;
+}
+main .view4 .container-view4 .container-view4-right h1 {
+  line-height: 1em;
+  font-size: 4em;
+}
+main .view4 .container-view4 .container-view4-right p {
+  margin: 2vw 0;
+  color: #777879;
+  line-height: 1.3;
+  font-size: 1.3em;
+}
+main .view4 .container-view4 .container-view4-right .btn-links {
+  margin-top: 1vw;
+  display: flex;
+  align-items: center;
+  gap: 5vw;
+}
+main .view4 .container-view4 .container-view4-right .btn-links > * {
+  text-decoration: none;
+}
+main .view4 .container-view4 .container-view4-right .btn-links > :nth-child(1) {
+  padding: 8px 20px;
+  border: 1px solid #0468d7;
+  color: #0468d7;
+  border-radius: 50px;
+  font-weight: 500;
+}
+main .view4 .container-view4 .container-view4-right .btn-links > :nth-child(1):hover {
+  background-color: #0468d7;
+  color: white;
+}
+main .view4 .container-view4 .container-view4-right .btn-links :nth-child(2) {
+  display: flex;
+  align-items: center;
+  color: #777879;
+}
+main .view4 .container-view4 .container-view4-right .btn-links :nth-child(2) span {
+  border: none !important;
+  color: #777879;
+  padding: 0;
+}
+main .view4 .container-view4 .container-view4-right .btn-links :nth-child(2):hover {
+  text-decoration: underline;
+}
+main .view4 .container-view4 .container-view4-right .btn-links :nth-child(2):hover i {
+  text-decoration: none !important;
+}
+main .view4 .container-view4 .container-view4-left img {
+  width: 30em;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .view5 {
+  padding: 3vw 5vw 3vw 15vw;
+}
+main .view5 .container-view5 {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+main .view5 .container-view5 > * {
+  flex-basis: 50%;
+}
+main .view5 .container-view5 .container-view5-left {
+  padding: 5vw 5vw 10vh 0;
+  display: flex;
+  flex-direction: column;
+}
+main .view5 .container-view5 .container-view5-left h3 {
+  font-size: 1.4em;
+  color: #777879;
+  margin-bottom: 1.2vw;
+}
+main .view5 .container-view5 .container-view5-left h1 {
+  line-height: 1em;
+  font-size: 4em;
+}
+main .view5 .container-view5 .container-view5-left p {
+  margin: 2vw 0;
+  color: #777879;
+  line-height: 1.3;
+  font-size: 1.3em;
+}
+main .view5 .container-view5 .container-view5-left .btn-links {
+  margin-top: 1vw;
+  display: flex;
+  align-items: center;
+  gap: 5vw;
+}
+main .view5 .container-view5 .container-view5-left .btn-links > * {
+  text-decoration: none;
+}
+main .view5 .container-view5 .container-view5-left .btn-links > :nth-child(1) {
+  padding: 8px 20px;
+  border: 1px solid #0468d7;
+  color: #0468d7;
+  border-radius: 50px;
+  font-weight: 500;
+}
+main .view5 .container-view5 .container-view5-left .btn-links > :nth-child(1):hover {
+  background-color: #0468d7;
+  color: white;
+}
+main .view5 .container-view5 .container-view5-right img {
+  width: 30em;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .view6 {
+  background: linear-gradient(45deg, #fcfce2, #f5fbfe);
+  padding: 2vw 5vw 2vw 15vw;
+}
+main .view6 .container-view6 {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+main .view6 .container-view6 > * {
+  flex-basis: 50%;
+}
+main .view6 .container-view6 .container-view6-right {
+  padding: 5vw 5vw 10vh 0;
+  display: flex;
+  flex-direction: column;
+}
+main .view6 .container-view6 .container-view6-right h3 {
+  font-size: 1.4em;
+  color: #777879;
+  margin-bottom: 1.2vw;
+}
+main .view6 .container-view6 .container-view6-right h1 {
+  line-height: 1em;
+  font-size: 4em;
+}
+main .view6 .container-view6 .container-view6-right p {
+  margin: 2vw 0;
+  color: #777879;
+  line-height: 1.3;
+  font-size: 1.3em;
+}
+main .view6 .container-view6 .container-view6-right .btn-links {
+  margin-top: 1vw;
+  display: flex;
+  align-items: center;
+  gap: 5vw;
+}
+main .view6 .container-view6 .container-view6-right .btn-links > * {
+  text-decoration: none;
+}
+main .view6 .container-view6 .container-view6-right .btn-links > :nth-child(1) {
+  padding: 8px 20px;
+  border: 1px solid #0468d7;
+  color: #0468d7;
+  border-radius: 50px;
+  font-weight: 500;
+}
+main .view6 .container-view6 .container-view6-right .btn-links > :nth-child(1):hover {
+  background-color: #0468d7;
+  color: white;
+}
+main .view6 .container-view6 .container-view6-left img {
+  width: 30em;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .view7 {
+  padding: 2vw 5vw 2vw 15vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .view7 .container-view7 {
+  flex-basis: 90%;
+  background-color: #042449;
+  color: white;
+  border-radius: 50px;
+}
+main .view7 .content-view7 {
+  padding: 2vw 3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5em;
+}
+main .view7 .content-view7 .btn-links {
+  margin-top: 1vw;
+  display: flex;
+  align-items: center;
+  gap: 5vw;
+}
+main .view7 .content-view7 .btn-links > * {
+  text-decoration: none;
+}
+main .view7 .content-view7 .btn-links > :nth-child(1) {
+  padding: 8px 20px;
+  font-weight: 500;
+  color: #0468d7;
+  background-color: white;
+  border-radius: 50px;
+}
+main .view7 .content-view7 .btn-links > :nth-child(1):hover {
+  color: #1b7be9;
+  background-color: rgb(177, 171, 171);
+}
+main .view7 .content-view7 .btn-links :nth-child(2) {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+main .view7 .content-view7 .btn-links :nth-child(2) span {
+  border: none !important;
+  color: white;
+  padding: 0;
+  transition: all 0.3s linear;
+}
+main .view7 .content-view7 .btn-links :nth-child(2):hover span {
+  padding-left: 2px;
+  transition: all 0.3s linear;
+}
+
+@media (max-width: 800px) {
+  header .event-bar {
+    padding: 5vw 2vw;
+    font-size: 1.2em;
+  }
+  header nav {
+    gap: 1.8em;
+    padding: 1.5em 3em;
+  }
+  header nav figure img {
+    width: 40%;
+  }
+  header nav i {
+    display: block;
+    font-size: 2em;
+  }
+  header nav ul {
+    display: none;
+  }
+  main .view1 .top {
+    flex-direction: column-reverse;
+    gap: 0.8em;
+  }
+  main .view1 .top .text {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  main .view1 .top .text h1 {
+    font-size: 1.2em;
+    line-height: 1em;
+    text-align: center;
+    padding: 0;
+  }
+  main .view1 .bottom p {
+    width: 80%;
+  }
+  main .view2 .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main .view2 .container .card {
+    width: 80%;
+    gap: 1.2em;
+    padding: 0 0 20px 0px;
+    border-top: 0px;
+    border-bottom: 4px solid #cfd1d4;
+  }
+  main .view3 {
+    padding: 2em 0.8em;
+  }
+  main .view3 .container-view3 {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  main .view3 .container-view3 .container-view3-left {
+    font-size: 1.2rem;
+    gap: 1.2em;
+    padding: 3em 1.2em;
+  }
+  main .view3 .container-view3 .container-view3-left h1 {
+    font-size: 3.4em;
+  }
+  main .view3 .container-view3 .container-view3-left .btn-links {
+    gap: 2vw;
+  }
+  main .view3 .container-view3 .container-view3-left .btn-links > :nth-child(1) {
+    padding: 5px 6px;
+  }
+  main .view4 {
+    padding: 2em 0.8em;
+  }
+  main .view4 .container-view4 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main .view4 .container-view4 .container-view4-right {
+    gap: 1.2em;
+    padding: 3em 1.2em;
+  }
+  main .view4 .container-view4 .container-view4-right h1 {
+    font-size: 3.3em;
+  }
+  main .view4 .container-view4 .container-view4-right p {
+    font-size: 1.6em;
+  }
+  main .view4 .container-view4 .container-view4-right .btn-links {
+    gap: 2vw;
+  }
+  main .view4 .container-view4 .container-view4-right .btn-links > :nth-child(1) {
+    padding: 5px 6px;
+  }
+  main .view5 {
+    padding: 2em 0.8em;
+  }
+  main .view5 .container-view5 {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  main .view5 .container-view5 .container-view5-left {
+    font-size: 1.2rem;
+    gap: 1.2em;
+    padding: 3em 1.2em;
+  }
+  main .view5 .container-view5 .container-view5-left h1 {
+    font-size: 2.5em;
+  }
+  main .view5 .container-view5 .container-view5-left .btn-links {
+    gap: 2vw;
+  }
+  main .view5 .container-view5 .container-view5-left .btn-links > :nth-child(1) {
+    padding: 5px 6px;
+  }
+  main .view6 {
+    padding: 2em 0.8em;
+  }
+  main .view6 .container-view6 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main .view6 .container-view6 .container-view6-right {
+    font-size: 1.2rem;
+    gap: 1.2em;
+    padding: 3em 1.2em;
+  }
+  main .view6 .container-view6 .container-view6-right h1 {
+    font-size: 2.5em;
+  }
+  main .view6 .container-view6 .container-view6-right img {
+    width: 27em;
+  }
+  main .view6 .container-view6 .container-view6-right .btn-links {
+    gap: 2vw;
+  }
+  main .view6 .container-view6 .container-view6-right .btn-links > :nth-child(1) {
+    padding: 5px 6px;
+  }
+}/*# sourceMappingURL=style.css.map */

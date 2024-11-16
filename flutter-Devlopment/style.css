@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+* html,
+* body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  font-size: clamp(10px, 1vw, 20px);
+}
+
+header .event-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1vw 0;
+  text-decoration: none;
+  color: white;
+  font-size: 0.9em;
+  font-weight: 700;
+  background: linear-gradient(45deg, #057BFC, #7F40F2);
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1vw 3.1rem;
+  align-items: center;
+}
+header nav i {
+  display: none;
+}
+header nav ul {
+  display: flex;
+  gap: 2em;
+}
+header nav ul li {
+  list-style: none;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #4a4a4a;
+  font-size: 14px;
+  font-family: "Google Sans", sans-serif;
+  font-weight: 700;
+}
+header nav ul li a:hover {
+  color: #057BFC;
+}
+header nav ul li:nth-last-child(1) a {
+  color: white;
+  padding: 10px 20px;
+  background-color: #0468d7;
+  border-radius: 50px;
+}
+header nav ul li:nth-last-child(1) a:hover {
+  background-color: #057BFC;
+}
+
+main .view1 {
+  padding: 4vw 12vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4.5em;
+  background: linear-gradient(313deg, #d3fff5, #f3fcff);
+}
+main .view1 .view1-top {
+  display: flex;
+}
+main .view1 .view1-top > * {
+  flex-basis: 50%;
+}
+main .view1 .view1-top .view1-top-left {
+  display: flex;
+  align-items: center;
+}
+main .view1 .view1-top .view1-top-left h1 {
+  padding: 0 0.5em;
+  font-size: 4.5em;
+  line-height: 1.1em;
+}
+main .view1 .view1-top .view1-top-right img {
+  width: 100%;
+}
+main .view1 .view1-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em 5em 0 5em;
+}
+main .view1 .view1-bottom p {
+  font-size: 2.5em;
+  line-height: 1.1em;
+  text-align: center;
+}
+main .view2 {
+  padding: 5vw 10vw;
+}
+main .view2 .container {
+  display: flex;
+  gap: 2.5em;
+}
+main .view2 .container .card {
+  border-top: 4px solid #cfd1d4;
+  display: flex;
+  flex-direction: column;
+  padding-right: 5vw;
+  padding-top: 2.2vw;
+  gap: 1.5vw;
+}
+main .view2 .container .card h2 {
+  font-size: 2em;
+}
+main .view2 .container .card p {
+  font-size: 1.2em;
+  opacity: 0.7;
+}
+main .view2 .container .card img {
+  margin-top: 5vh;
+  max-width: 20em;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 800px) {
+  header .event-bar {
+    padding: 5vw 2vw;
+    font-size: 1.2em;
+  }
+  header nav {
+    gap: 1.8em;
+    padding: 1.5em 3em;
+  }
+  header nav figure img {
+    width: 40%;
+  }
+  header nav i {
+    display: block;
+    font-size: 2em;
+  }
+  header nav ul {
+    display: none;
+  }
+  main .view1 {
+    padding: 20vw 4vw;
+  }
+  main .view1 .view1-top {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 8em;
+  }
+  main .view1 .view1-top .view1-top-left {
+    display: flex;
+    align-items: center;
+  }
+  main .view1 .view1-top .view1-top-left h1 {
+    font-size: 4em;
+    text-align: center;
+    padding: 0;
+  }
+  main .view1 .view1-top .view1-top-right {
+    display: flex;
+    justify-content: center;
+  }
+  main .view1 .view1-top .view1-top-right img {
+    width: 80%;
+  }
+  main .view1 .view1-bottom {
+    padding: 5em 1em;
+  }
+  main .view2 .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  main .view2 .container .card {
+    width: 80%;
+    gap: 1.2em;
+    padding: 0 0 20px 0px;
+    border-top: 0px;
+    border-bottom: 4px solid #cfd1d4;
+  }
+}
+@media (min-width: 1900px) {
+  main .view-top-gradient {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(313deg, #d3fff5, #f3fcff);
+  }
+  main .view-top-gradient .view1 {
+    padding: 20vw 4vw;
+  }
+  main .view-top-gradient .view1 .view1-top {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 8em;
+  }
+  main .view-top-gradient .view1 .view1-top .view1-top-left {
+    display: flex;
+    align-items: center;
+    padding: 0 4vw;
+  }
+  main .view-top-gradient .view1 .view1-top .view1-top-left h1 {
+    font-size: 6em;
+    text-align: center;
+    padding: 0;
+  }
+  main .view-top-gradient .view1 .view1-top .view1-top-right {
+    display: flex;
+    justify-content: center;
+  }
+  main .view-top-gradient .view1 .view1-top .view1-top-right img {
+    width: 50%;
+  }
+  main .view-top-gradient .view1 .view1-bottom {
+    padding: 5em 1em;
+  }
+  main .view-top-gradient .view1 .view1-bottom p {
+    width: 40%;
+    font-size: 8em;
+  }
+}/*# sourceMappingURL=style.css.map */
