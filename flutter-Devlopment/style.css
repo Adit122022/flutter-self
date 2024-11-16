@@ -14,6 +14,10 @@ html {
   font-size: clamp(10px, 1vw, 20px);
 }
 
+header {
+  width: 100%;
+  position: fixed;
+}
 header .event-bar {
   display: flex;
   align-items: center;
@@ -23,13 +27,14 @@ header .event-bar {
   color: white;
   font-size: 0.9em;
   font-weight: 700;
-  background: linear-gradient(45deg, #057BFC, #7F40F2);
+  background: linear-gradient(45deg, #057bfc, #7f40f2);
 }
 header nav {
   display: flex;
   justify-content: space-between;
   padding: 1vw 3.1rem;
   align-items: center;
+  background-color: #fff;
 }
 header nav i {
   display: none;
@@ -49,7 +54,7 @@ header nav ul li a {
   font-weight: 700;
 }
 header nav ul li a:hover {
-  color: #057BFC;
+  color: #057bfc;
 }
 header nav ul li:nth-last-child(1) a {
   color: white;
@@ -58,7 +63,7 @@ header nav ul li:nth-last-child(1) a {
   border-radius: 50px;
 }
 header nav ul li:nth-last-child(1) a:hover {
-  background-color: #057BFC;
+  background-color: #057bfc;
 }
 
 main .view1 {
@@ -127,6 +132,66 @@ main .view2 .container .card img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+main .view3 {
+  padding: 5vw 9vw;
+  display: flex;
+  background-color: #196bd4;
+  background-image: linear-gradient(to bottom, #196bd4 20%, transparent 60%), radial-gradient(ellipse at -50% -150%, transparent 80%, #196bd4 80%), linear-gradient(145deg, #196bd4 0, #1783e1 60%);
+  color: white;
+}
+main .view3 .view3-container {
+  flex-basis: 100%;
+  padding: 2em 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5em;
+}
+main .view3 .view3-container .view3-top {
+  padding: 0 6em 0 3em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+main .view3 .view3-container .view3-top p {
+  font-size: 2em;
+  font-weight: 700;
+}
+main .view3 .view3-container .view3-top h1 {
+  font-size: 4em;
+  line-height: 1em;
+}
+main .view3 .view3-container .view3-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-right: 6em;
+  gap: 2vw;
+}
+main .view3 .view3-container .view3-bottom .view3-card-container {
+  display: flex;
+  gap: 5em;
+}
+main .view3 .view3-container .view3-bottom .view3-card-container > * {
+  flex-basis: 50%;
+}
+main .view3 .view3-container .view3-bottom .view3-card-container .card {
+  padding: 1.8em;
+  border: 2px solid transparent;
+  transition: box-shadow 0.3s ease;
+}
+main .view3 .view3-container .view3-bottom .view3-card-container .card:hover {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3), 0px 6px 6px rgba(0, 0, 0, 0.2);
+}
+main .view3 .view3-container .view3-bottom .view3-card-container .card h2 {
+  font-size: 2em;
+  font-weight: 700;
+  margin: 0.8em 0;
+}
+main .view3 .view3-container .view3-bottom .view3-card-container .card p {
+  font-size: 1.4em;
+}
 
 @media (max-width: 800px) {
   header .event-bar {
@@ -185,6 +250,13 @@ main .view2 .container .card img {
     padding: 0 0 20px 0px;
     border-top: 0px;
     border-bottom: 4px solid #cfd1d4;
+  }
+  main .view3 .view3-container .view3-bottom {
+    gap: 5em;
+    padding-right: 0;
+  }
+  main .view3 .view3-container .view3-bottom .view3-card-container {
+    flex-direction: column;
   }
 }
 @media (min-width: 1900px) {

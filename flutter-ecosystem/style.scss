@@ -79,7 +79,6 @@ main {
 
     .top {
       display: flex;
-      
       justify-content: space-between;
       align-items: center;
 
@@ -491,10 +490,7 @@ padding: 2vw 3vw;
     padding: 1.5em 3em;
     figure {
       img{
-        width: 40%;
-      }
-    }
-     
+        width: 40%;}}
       i{
         display: block;
         font-size: 2em;
@@ -523,8 +519,8 @@ h1{
 }
         }
       }
-     .bottom{
-p{
+     .bottom{   
+      p{
   width: 80%;
 }
      } 
