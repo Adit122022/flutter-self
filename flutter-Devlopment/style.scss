@@ -17,6 +17,43 @@ html {
 header {
   width: 100%;
   position: fixed;
+  // moadaal
+  .sidebar{
+    position: absolute;
+    right: 5%;
+    top: 104%;
+    display: none;
+    ul{
+    padding: 0.5em;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      border-radius: 5px;
+      background-color: #fffffff0;
+      gap: 1em;
+      li {
+        padding: 0.5em 4.5em 0.5em 0.5em;
+        border-radius: 5px;
+        // background-color: rgba(150, 61, 61, 0.391);
+        &:hover{
+          transition: all 0.3s linear;
+          scale: 0.99;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        a {
+          text-decoration: none;
+          color: #4a4a4a;
+          font-size: 1.5em;
+          font-family: "Google Sans", sans-serif;
+          font-weight: 700;
+          &:hover {
+            color: #2f3030;
+          }
+        }
+       
+      }
+    }
+  }
   // event bar
   .event-bar {
     display: flex;
@@ -73,7 +110,7 @@ header {
 main {
   // page 1
   .view1 {
-    padding: 4vw 12vw;
+    padding: 10vw 12vw 4vw 12vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -157,6 +194,7 @@ main {
       padding: 2em 0;
       display: flex;
       justify-content: center;
+      align-items: center;
       flex-direction: column;
     gap: 5em;
       .view3-top {
@@ -209,6 +247,89 @@ main {
       }
     }
   }
+   // page 5 -se page 7 tak same code hai class view5 hai sabka
+   .view5 {
+    padding: 3vw 5vw 3vw 15vw;
+    .container-view5 {
+      display: flex;
+      align-items: center;
+      gap: 2em;
+      & > * {
+        flex-basis: 50%;
+      }
+      .container-view5-left {
+        padding: 5vw 5vw 10vh 0;
+        display: flex;
+        flex-direction: column;
+        
+        h3 {
+          font-size: 1.4em;
+          color: #777879;
+          margin-bottom: 1.2vw;
+        }
+        h1 {
+          line-height: 1em;
+          font-size: 4em;
+        }
+        p {
+          margin: 2vw 0;
+          color: #777879;
+          line-height: 1.3;
+          font-size: 1.3em;
+        }
+        .btn-links {
+          margin-top: 1vw;
+          display: flex;
+          align-items: center;
+          gap: 5vw;
+          & > * {
+            text-decoration: none;
+          }
+          & > :nth-child(1) {
+            padding: 0.6em 2em;
+            border: 1px solid #0468d7;
+            color: #0468d7;
+            border-radius: 50px;
+            font-weight: 500;
+          }
+          & > :nth-child(1):hover {
+            background-color: #0468d7;
+            color: white;
+          }
+          & :nth-child(2) {
+            display: inline;
+            color: black;
+            span {
+              border: none !important;
+              padding: 0;
+              transition: all 0.3s linear;
+            }
+          }
+          & :nth-child(2):hover {
+        
+            span{
+                transition: all 0.3s linear;
+                padding-left: 2px;
+              }
+          }
+        }
+      }
+      // right
+      .container-view5-right {
+        img {
+          width: 30em;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  .row-reverse{
+    flex-direction: row-reverse;
+  }
+  .p-0{
+   border-bottom: 2px solid #79777724;
+  }
 }
 
 // for mobile screens
@@ -242,7 +363,7 @@ main {
   main {
     // page 1
     .view1 {
-      padding: 20vw 4vw;
+      padding: 20vh 4vw 20vw 4vw;
       .view1-top {
         flex-direction: column-reverse;
         align-items: center;
@@ -284,9 +405,7 @@ main {
       }
     }
     .view3 {
-      
       .view3-container{
-
         .view3-bottom {
 gap: 5em;
 padding-right: 0;
@@ -295,6 +414,27 @@ padding-right: 0;
           }
         }
       } 
+    }
+     // page5 -page 7 are declared using view5
+     .view5{
+      padding: 5em 0.8em;
+      .container-view5{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        .container-view5-left{
+          font-size: 1.2rem;
+          gap: 1.2em;
+          padding: 3em 1.2em;
+            .btn-links{
+              gap: 2vw;
+             a
+              {  padding: 6px 10px;
+              }
+            }   
+        }
+       
+      }
     }
   }
 }

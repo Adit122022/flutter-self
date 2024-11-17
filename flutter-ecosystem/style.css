@@ -15,6 +15,40 @@ html {
   font-size: clamp(10px, 1vw, 20px);
 }
 
+header .sidebar {
+  position: absolute;
+  right: 5%;
+  top: 15%;
+  display: none;
+}
+header .sidebar ul {
+  padding: 0.5em;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.9411764706);
+  gap: 1em;
+}
+header .sidebar ul li {
+  padding: 0.5em 4.5em 0.5em 0.5em;
+  border-radius: 5px;
+}
+header .sidebar ul li:hover {
+  transition: all 0.3s linear;
+  scale: 0.99;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+header .sidebar ul li a {
+  text-decoration: none;
+  color: #4a4a4a;
+  font-size: 1.5em;
+  font-family: "Google Sans", sans-serif;
+  font-weight: 700;
+}
+header .sidebar ul li a:hover {
+  color: #2f3030;
+}
 header .event-bar {
   display: flex;
   align-items: center;
@@ -313,17 +347,15 @@ main .view5 .container-view5 .container-view5-left .btn-links {
   align-items: center;
   gap: 5vw;
 }
-main .view5 .container-view5 .container-view5-left .btn-links > * {
+main .view5 .container-view5 .container-view5-left .btn-links a {
   text-decoration: none;
-}
-main .view5 .container-view5 .container-view5-left .btn-links > :nth-child(1) {
   padding: 8px 20px;
   border: 1px solid #0468d7;
   color: #0468d7;
   border-radius: 50px;
   font-weight: 500;
 }
-main .view5 .container-view5 .container-view5-left .btn-links > :nth-child(1):hover {
+main .view5 .container-view5 .container-view5-left .btn-links a:hover {
   background-color: #0468d7;
   color: white;
 }
@@ -558,7 +590,7 @@ main .view7 .content-view7 .btn-links :nth-child(2):hover span {
   main .view5 .container-view5 .container-view5-left .btn-links {
     gap: 2vw;
   }
-  main .view5 .container-view5 .container-view5-left .btn-links > :nth-child(1) {
+  main .view5 .container-view5 .container-view5-left .btn-links a {
     padding: 5px 6px;
   }
   main .view6 {

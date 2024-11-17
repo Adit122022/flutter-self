@@ -18,6 +18,40 @@ header {
   width: 100%;
   position: fixed;
 }
+header .sidebar {
+  position: absolute;
+  right: 5%;
+  top: 104%;
+  display: none;
+}
+header .sidebar ul {
+  padding: 0.5em;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.9411764706);
+  gap: 1em;
+}
+header .sidebar ul li {
+  padding: 0.5em 4.5em 0.5em 0.5em;
+  border-radius: 5px;
+}
+header .sidebar ul li:hover {
+  transition: all 0.3s linear;
+  scale: 0.99;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+header .sidebar ul li a {
+  text-decoration: none;
+  color: #4a4a4a;
+  font-size: 1.5em;
+  font-family: "Google Sans", sans-serif;
+  font-weight: 700;
+}
+header .sidebar ul li a:hover {
+  color: #2f3030;
+}
 header .event-bar {
   display: flex;
   align-items: center;
@@ -67,7 +101,7 @@ header nav ul li:nth-last-child(1) a:hover {
 }
 
 main .view1 {
-  padding: 4vw 12vw;
+  padding: 10vw 12vw 4vw 12vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -144,6 +178,7 @@ main .view3 .view3-container {
   padding: 2em 0;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   gap: 5em;
 }
@@ -192,6 +227,81 @@ main .view3 .view3-container .view3-bottom .view3-card-container .card h2 {
 main .view3 .view3-container .view3-bottom .view3-card-container .card p {
   font-size: 1.4em;
 }
+main .view5 {
+  padding: 3vw 5vw 3vw 15vw;
+}
+main .view5 .container-view5 {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+main .view5 .container-view5 > * {
+  flex-basis: 50%;
+}
+main .view5 .container-view5 .container-view5-left {
+  padding: 5vw 5vw 10vh 0;
+  display: flex;
+  flex-direction: column;
+}
+main .view5 .container-view5 .container-view5-left h3 {
+  font-size: 1.4em;
+  color: #777879;
+  margin-bottom: 1.2vw;
+}
+main .view5 .container-view5 .container-view5-left h1 {
+  line-height: 1em;
+  font-size: 4em;
+}
+main .view5 .container-view5 .container-view5-left p {
+  margin: 2vw 0;
+  color: #777879;
+  line-height: 1.3;
+  font-size: 1.3em;
+}
+main .view5 .container-view5 .container-view5-left .btn-links {
+  margin-top: 1vw;
+  display: flex;
+  align-items: center;
+  gap: 5vw;
+}
+main .view5 .container-view5 .container-view5-left .btn-links > * {
+  text-decoration: none;
+}
+main .view5 .container-view5 .container-view5-left .btn-links > :nth-child(1) {
+  padding: 0.6em 2em;
+  border: 1px solid #0468d7;
+  color: #0468d7;
+  border-radius: 50px;
+  font-weight: 500;
+}
+main .view5 .container-view5 .container-view5-left .btn-links > :nth-child(1):hover {
+  background-color: #0468d7;
+  color: white;
+}
+main .view5 .container-view5 .container-view5-left .btn-links :nth-child(2) {
+  display: inline;
+  color: black;
+}
+main .view5 .container-view5 .container-view5-left .btn-links :nth-child(2) span {
+  border: none !important;
+  padding: 0;
+  transition: all 0.3s linear;
+}
+main .view5 .container-view5 .container-view5-left .btn-links :nth-child(2):hover span {
+  transition: all 0.3s linear;
+  padding-left: 2px;
+}
+main .view5 .container-view5 .container-view5-right img {
+  width: 30em;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .row-reverse {
+  flex-direction: row-reverse;
+}
+main .p-0 {
+  border-bottom: 2px solid rgba(121, 119, 119, 0.1411764706);
+}
 
 @media (max-width: 800px) {
   header .event-bar {
@@ -213,7 +323,7 @@ main .view3 .view3-container .view3-bottom .view3-card-container .card p {
     display: none;
   }
   main .view1 {
-    padding: 20vw 4vw;
+    padding: 20vh 4vw 20vw 4vw;
   }
   main .view1 .view1-top {
     flex-direction: column-reverse;
@@ -257,6 +367,25 @@ main .view3 .view3-container .view3-bottom .view3-card-container .card p {
   }
   main .view3 .view3-container .view3-bottom .view3-card-container {
     flex-direction: column;
+  }
+  main .view5 {
+    padding: 5em 0.8em;
+  }
+  main .view5 .container-view5 {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  main .view5 .container-view5 .container-view5-left {
+    font-size: 1.2rem;
+    gap: 1.2em;
+    padding: 3em 1.2em;
+  }
+  main .view5 .container-view5 .container-view5-left .btn-links {
+    gap: 2vw;
+  }
+  main .view5 .container-view5 .container-view5-left .btn-links a {
+    padding: 6px 10px;
   }
 }
 @media (min-width: 1900px) {
