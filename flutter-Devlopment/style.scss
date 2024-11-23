@@ -247,10 +247,66 @@ main {
       }
     }
   }
-  // view  page 8
+  // view  page 8 extra classes
+  .font{
+    line-height: 1em;
+    font-size: 3.5em;
+    padding-right:5em;
+  }
+  .font-small{
+    color: #777879;
+          line-height: 1.3;
+          font-size: 1.5em;
+          margin-bottom: 0.5em;
+          font-weight: 700;
+  }
+  .font-sm{
+    font-size: 2.5em !important;
+    font-weight: 500 !important;
+  }.font-smm{
+    font-size: 1.9em !important;
+    font-weight: 500 !important;
+  }
+  .m-x{
+margin: 0.9em 0;
+  }
+  .font-semi{
+    font-size: 2em !important;
+  }
+.w-full{
+    width: 27em !important;
+  }
+  .m-t{
+    margin-top: -10%;
+  }
+
+  .p-reset{
+padding: 0 !important;
+  }
+  .p-xl{
+    padding: 4em 12em !important;
+  }
+  .p{
+    padding: 2em 0em 1em 4em;
+  }
+  
+  .fit{
+    width: fit-content;
+  }
+  .linear-grad{
+    border-radius: 50px;
+    background-image: linear-gradient(90deg, #9cc4f5, #b8f0f7);
+  }
+  .justify{
+    display: flex;
+    justify-content: flex-end;
+  }
   
    // page 5 -se page 7 tak same code hai class view5 hai sabka
    .view5 {
+    .top{
+      padding: 1em 3em;
+    }
     padding: 3vw 5vw 3vw 15vw;
     .container-view5 {
       display: flex;
@@ -333,6 +389,140 @@ main {
    border-bottom: 2px solid #79777724;
   }
 }
+// footer
+footer {
+  background: #f8f9fa;
+  position: relative;
+  bottom: 0;
+  padding: 10%;
+
+  .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer-main {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      width: 100%;
+      margin-bottom: 65px;
+  }
+
+  .footer-info-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .info1, 
+      .info2, 
+      .info3 {
+          margin-top: 2rem;
+          margin-left: 2rem;
+      }
+  }
+
+  .no-bullets {
+      list-style-type: none;
+      padding-left: 0;
+      margin: 0;
+
+      li {
+          font-size: 1.2rem;
+          font-weight: 400;
+          padding: 0.5rem;
+
+          a {
+              text-decoration: none;
+              color: rgba(0, 0, 0, 0.7);
+              transition: all 0.5s linear;
+
+              &:hover {
+                  color: #0468D7;
+                  cursor: pointer;
+                  transition: all 0.5s linear;
+              }
+          }
+
+          &:hover {
+              color: #0468D7;
+              cursor: pointer;
+              transition: all 0.5s linear;
+          }
+      }
+  }
+
+  .footer-logo-section {
+      img {
+          max-width: 80%;
+      }
+  }
+
+  .social {
+      width: 100%;
+      display: flex;
+      justify-content: start;
+      flex-wrap: wrap;
+      margin: 1rem;
+      gap: 2em;
+
+      a{
+        margin-right: 1rem;
+        color: rgba(0, 0, 0, 0.7);
+        transition: all 0.5s linear;
+        font-size: 2em;
+        text-decoration: none;
+        &:hover {
+            color: #0468D7;
+            cursor: pointer;
+            scale: 1.1;
+            transition: all 0.5s linear;
+        }
+       
+      }
+   
+  }
+
+  .line {
+      border-top: 2px solid rgba(0, 0, 0, 0.5);
+      width: 100%;
+      margin: 20px 0;
+  }
+
+  .footer-tray {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1rem;
+
+      .tray1 {
+          min-width: 250px;
+          width: 60%;
+          font-size: 0.9rem;
+          flex-basis: 60%;
+
+          p {
+              width: 100%;
+          }
+      }
+
+      .tray2 {
+          flex-basis: 40%;
+          min-width: 250px;
+
+          ul {
+              display: flex;
+              justify-content: space-evenly;
+              color: rgba(0, 0, 0, 0.6);
+              font-size: 0.5rem;
+          }
+      }
+  }
+}
+
 
 // for mobile screens
 @media (max-width: 800px) {
@@ -363,6 +553,16 @@ main {
     }
   }
   main {
+    .p {
+      padding: 0em 2em 2em 2em;
+  }
+.p-xl{
+  padding: 1em!important;
+}
+    .font{
+      padding-right: 0em !important;
+      margin-bottom: 1em;
+    }
     // page 1
     .view1 {
       padding: 20vh 4vw 20vw 4vw;
@@ -420,6 +620,9 @@ padding-right: 0;
      // page5 -page 7 are declared using view5
      .view5{
       padding: 5em 0.8em;
+      .top{
+        padding: 1em;
+      }
       .container-view5{
         flex-direction: column-reverse;
         justify-content: center;
@@ -443,6 +646,7 @@ padding-right: 0;
 // for wide screens
 @media (min-width: 1900px) {
   main {
+  
     .view-top-gradient {
       max-width: 100%;
       width: 100%;
